@@ -1,0 +1,21 @@
+body {
+  line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  overflow-x: hidden;
+  background-color: #e2e2e2;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.dropdown-menu {
+  width: 100vw;
+  position: absolute;
+  left: 0px;
+}
+/*# sourceMappingURL=index.css.map */
