@@ -16,7 +16,9 @@ $menu-container-bgColor: white;
   justify-content: center;
   z-index: 1001 !important;
 }
-
+.header-item{
+  border: solid 1px black;
+}
 @mixin logo {
   margin: auto;
   text-decoration: none;

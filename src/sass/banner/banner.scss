@@ -1,0 +1,40 @@
+body {
+    line-height: 1.5;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    overflow-x: hidden;
+    background-color: #eeeeee;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:before,
+:after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#banner {
+    background: url(../../img/banner.jpg) no-repeat 0, 0, rgb(0, 95, 184);
+    background-blend-mode: multiply;
+    padding: 70px 30px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    max-height: 500px;
+    height: 40%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    div {
+        text-align: center;
+        color: white;
+        margin: auto;
+        align-self: center;
+    }
+}
