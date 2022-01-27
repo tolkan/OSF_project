@@ -1,7 +1,3 @@
-.header-item {
-  border: solid 1px black;
-}
-
 body {
   line-height: 1.5;
   font-family: "Poppins", sans-serif;
@@ -23,19 +19,27 @@ body {
           box-sizing: border-box;
 }
 
-.container {
+.header {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 9999;
+}
+
+.headerCont {
   padding-top: 10px;
-  background-color: white;
+  background-color: white !important;
   max-width: 1280px;
   margin: auto;
 }
 
 .row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -ms-flex-wrap: wrap !important;
+      flex-wrap: wrap !important;
 }
 
 .v-center {
@@ -55,12 +59,11 @@ a {
 }
 
 @media (max-width: 991px) {
-  .container .mobile-logo {
+  .headerCont .mobile-logo {
     z-index: 1000 !important;
-    margin-right: 30px;
+    margin-left: calc(50% - 75px);
   }
-  .container .mobile-logo a {
-    z-index: 1000 !important;
+  .headerCont .mobile-logo a {
     margin: auto;
     text-decoration: none;
     background-size: contain;
@@ -68,27 +71,48 @@ a {
     background-position: center;
     display: block;
     margin-bottom: 15px;
+    z-index: 1000 !important;
     height: 40px !important;
     width: 55px;
     background-image: url("../../img/Ekran Resmi 2022-01-19 16.19.30.png");
   }
+  .header {
+    background-color: white;
+  }
   .header .item-center {
-    -webkit-box-ordinal-group: 4;
-        -ms-flex-order: 3;
-            order: 3;
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 100%;
-            flex: 0 0 100%;
+    -webkit-box-ordinal-group: 4 !important;
+        -ms-flex-order: 3 !important;
+            order: 3 !important;
+    -webkit-box-flex: 0 !important;
+        -ms-flex: 0 0 100% !important;
+            flex: 0 0 100% !important;
   }
-  .header .item-left,
+  .header .item-left {
+    -webkit-box-flex: 0 !important;
+        -ms-flex: 0 0 auto !important;
+            flex: 0 0 auto !important;
+  }
+  .header .item-left a {
+    display: none !important;
+  }
   .header .item-right {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 auto;
-            flex: 0 0 auto;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: #23282c;
+    z-index: 10000;
+    padding: 20px;
+    text-align: center;
   }
-  .header .item-left a,
   .header .item-right a {
-    display: none;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    color: white;
+    text-decoration: none;
+    font-size: xx-large;
+    margin: 0px 15px;
   }
   .v-center {
     -webkit-box-pack: justify;
@@ -102,7 +126,8 @@ a {
     display: -ms-flexbox;
     display: flex;
     float: left;
-    margin-left: 25px;
+    margin-left: 0px;
+    margin-bottom: 15px;
     cursor: pointer;
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -141,7 +166,8 @@ a {
     display: -ms-flexbox;
     display: flex;
     float: left;
-    margin-left: 25px;
+    margin-left: 0px;
+    margin-bottom: 15px;
     cursor: pointer;
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -176,41 +202,6 @@ a {
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
     z-index: 10 !important;
-    /*
-      .mobile-menu-head {
-        display: flex;
-        height: 50px;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-        justify-content: space-between;
-        align-items: center;
-        position: relative;
-        z-index: 501;
-        position: sticky;
-        background-color: #ffffff;
-        top: 0;
-
-        .go-back {
-          height: 50px;
-          width: 50px;
-          border-right: 1px solid rgba(0, 0, 0, 0.1);
-          cursor: pointer;
-          line-height: 50px;
-          text-align: center;
-          color: #000000;
-          font-size: 16px;
-          display: none;
-        }
-
-        &.active .go-back {
-          display: block;
-        }
-
-        .current-menu-title {
-          font-size: 15px;
-          font-weight: 500;
-          color: #000000;
-        }
-      }*/
   }
   .header .menu.active {
     -webkit-transform: translate(0%);
@@ -243,11 +234,44 @@ a {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
   }
+  .header .menu ul li:last-child {
+    margin-bottom: 100px;
+  }
+  .header .menu ul li.custom-select select,
+  .header .menu ul li.custom-select select:hover,
+  .header .menu ul li.custom-select select:focus {
+    border: none;
+    text-decoration: none;
+    outline: none;
+    background-color: transparent;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+  .header .menu ul li.custom-select select.custSelect {
+    line-height: 50px;
+    height: 50px;
+    padding: 0 50px 0 15px;
+    color: white;
+    display: block;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    font-weight: 300;
+    font-size: 18px;
+    width: 100%;
+  }
   .header .menu .menu-main {
     height: calc(100vh - 65px);
     overflow-x: hidden;
     overflow-y: auto;
     padding-bottom: 30px;
+  }
+  .header .menu ul {
+    padding: 0px;
+  }
+  .header .menu ul a {
+    text-decoration: none;
   }
   .header .menu ul li .sub-menu {
     visibility: visible;
@@ -256,7 +280,6 @@ a {
             box-shadow: none;
     margin: 0;
     padding: 15px;
-    width: 100%;
     height: 100%;
     padding-top: 65px;
     max-width: none;
@@ -278,6 +301,9 @@ a {
     max-width: none;
     min-width: auto;
     display: none;
+  }
+  .header .menu ul li .sub-menu.mega-menu img {
+    max-width: 100%;
   }
   .header .menu ul li .sub-menu.active {
     display: block;
@@ -303,48 +329,6 @@ a {
   .header .menu ul li .sub-menu.mega-menu > .list-item > ul > li > a {
     display: block;
   }
-  /*
-  @keyframes slideLeft {
-    0% {
-      opacity: 0;
-      transform: translateX(100%);
-    }
-
-    100% {
-      opacity: 1;
-      transform: translateX(0%);
-    }
-  }
-
-  @keyframes slideRight {
-    0% {
-      opacity: 1;
-      transform: translateX(0%);
-    }
-
-    100% {
-      opacity: 0;
-      transform: translateX(100%);
-    }
-  }
-
-  .menu-overlay {
-    position: fixed;
-    background-color: rgba(0, 0, 0, 0.5);
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1098;
-    visibility: hidden;
-    opacity: 0;
-    transition: all 0.5s ease;
-
-    &.active {
-      visibility: visible;
-      opacity: 1;
-    }
-  }*/
 }
 
 @media (min-width: 992px) {
@@ -365,25 +349,27 @@ a {
     background-color: white;
     display: block;
     width: 100%;
-    position: relative;
+    max-width: 100%;
     z-index: 502;
   }
   .header .item-left {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 15%;
-            flex: 0 0 15%;
+        -ms-flex: 0 0 12%;
+            flex: 0 0 12%;
   }
   .header .item-center {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 70%;
-            flex: 0 0 70%;
-    padding-right: 20px;
+        -ms-flex: 0 0 73%;
+            flex: 0 0 73%;
+    margin: 0px;
+    padding-right: 10px;
   }
   .header .item-center .mobile-logo {
     display: none;
   }
   .header .item-right {
     padding-top: 5px;
+    margin: 0px;
     margin-bottom: auto;
     -webkit-box-flex: 0;
         -ms-flex: 0 0 15%;
@@ -414,21 +400,32 @@ a {
   .header .menu ul li {
     padding-bottom: 15px;
     display: inline-block;
-    line-height: 37px;
+    line-height: 30px;
     border-bottom: 3px solid transparent;
   }
   .header .menu ul li.custom-select select,
   .header .menu ul li.custom-select select:hover,
   .header .menu ul li.custom-select select:focus {
-    -webkit-box-shadow: none;
-            box-shadow: none;
+    -webkit-box-shadow: 0 0 0 white;
+            box-shadow: 0 0 0 white;
     border: none;
     text-decoration: none;
     outline: none;
+    background-color: white;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
   }
   .header .menu ul li.custom-select select.custSelect {
+    background-color: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
     color: #6d6d6d;
     text-align: center;
+    font-weight: 300;
+    font-size: 15px;
   }
   .header .menu ul li.menu-item-has-children:hover {
     background-color: #23282c;
@@ -447,6 +444,7 @@ a {
     text-transform: capitalize;
     -webkit-transition: color 0s ease;
     transition: color 0s ease;
+    text-decoration: none;
   }
   .header .menu ul li .sub-menu {
     position: absolute;

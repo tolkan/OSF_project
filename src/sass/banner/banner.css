@@ -1,25 +1,4 @@
-body {
-  line-height: 1.5;
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  overflow-x: hidden;
-  background-color: #eeeeee;
-}
-
-* {
-  margin: 0px;
-  padding: 0px;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-:before,
-:after {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-#banner {
+.banner {
   background: url(../../img/banner.jpg) no-repeat 0, 0, #005fb8;
   background-blend-mode: multiply;
   padding: 70px 30px;
@@ -39,12 +18,98 @@ body {
   display: flex;
 }
 
-#banner div {
+.banner div {
   text-align: center;
   color: white;
   margin: auto;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+}
+
+.banner2 {
+  background-color: #333232;
+  padding: 30px 10px;
+}
+
+.banner2 .row ul {
+  list-style-type: none;
+}
+
+.banner2 .row ul li {
+  line-height: 1;
+}
+
+.banner2 .row ul li div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 10px 0px;
+}
+
+.banner2 .row ul li div .icon-container {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 33%;
+          flex: 0 0 33%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0px;
+  padding: 0px;
+}
+
+.banner2 .row ul li div .icon-container img {
+  margin: 0px auto auto auto;
+  max-width: 80px;
+}
+
+.banner2 .row ul li div .text-container {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 67%;
+          flex: 0 0 67%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0px;
+  max-width: calc(100% - 100px);
+  color: white;
+}
+
+.banner2 .row ul li div .text-container p {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+@media (min-width: 992px) {
+  .banner2 {
+    padding: 70px 30px;
+  }
+  .banner2 .row ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .banner2 .row ul li {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 33%;
+            flex: 0 0 33%;
+    padding: 0 15px;
+    position: relative;
+  }
+  .banner2 .row ul li:nth-child(2) div {
+    position: relative;
+  }
+  .banner2 .row ul li:nth-child(2) div .icon-container {
+    position: absolute;
+    left: 0px;
+  }
+  .banner2 .row ul li:nth-child(2) div .text-container {
+    position: absolute;
+    right: 0px;
+  }
 }
 /*# sourceMappingURL=banner.css.map */

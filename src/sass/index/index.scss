@@ -1,30 +1,17 @@
-body {
-    line-height: 1.5;
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    overflow-x: hidden;
-    background-color: rgb(238, 238, 238);
-}
-
-* {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-}
-
-:before,
-:after {
-    box-sizing: border-box;
-}
 @mixin Button($color) {
     border: solid 2px $color;
     border-radius: 30px;
     color: $color;
     background-color: rgba(255, 255, 255, 0);
     padding: 12px 33px;
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.25);
+    }
 }
-#section1 {
-    background-color: #fff;
+
+.cont {
+    padding-top: 100px;
+    padding-bottom: 50px;
 }
 
 .carousel {
@@ -45,27 +32,30 @@ body {
         }
     }
     .carousel-inner {
-        height: 500px;
-        .carousel-item {
-            height: 100%;
-            img {
-                object-fit: cover;
+        &.main-carousel-inner {
+            height: 500px;
+            .carousel-item {
                 height: 100%;
-                width: auto;
-                max-width: 100%;
-                border-radius: 8px;
-            }
-            div {
-                width: 100%;
-                text-align: center;
-                display: block;
-                position: absolute;
-                bottom: 0px;
-                padding: 10px 10px 55px 10px;
-                align-items: center;
-                color: white;
-                button {
-                    @include Button(#fff);
+                img {
+                    object-fit: cover;
+                    height: 100%;
+                    width: auto;
+                    max-width: 100%;
+                    border-radius: 8px;
+                }
+                div {
+                    width: 100%;
+                    text-align: center;
+                    display: block;
+                    position: absolute;
+                    bottom: 0px;
+                    padding: 10px 10px 55px 10px;
+                    align-items: center;
+                    color: white;
+                    background-image: linear-gradient(rgba(0, 0, 0, 0)rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)rgba(0, 0, 0, 0.9));
+                    button {
+                        @include Button(#fff);
+                    }
                 }
             }
         }
@@ -73,13 +63,12 @@ body {
 }
 
 .col-12 {
-    border: solid white 1px;
     padding: 5px;
 }
 .col-lg-4 {
     div {
         color: white;
-        border: solid white 1px;
+
         text-align: center;
         &.img {
             background-color: rgb(122, 182, 31);
@@ -105,17 +94,13 @@ body {
         }
     }
 }
-#nav{
-    
+#nav {
     padding: 0px;
     margin: 0px;
 }
 
 @media (max-width: 991px) {
-
-    #section1 {
-        .col-lg-4 {
-            display: none;
-        }
+    .col-lg-4 {
+        display: none;
     }
 }

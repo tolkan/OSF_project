@@ -1,0 +1,106 @@
+body {
+    line-height: 1.5;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    overflow-x: hidden;
+    background-color: white;
+}
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+:before,
+:after {
+    box-sizing: border-box;
+}
+.footerCont {
+    padding-top: 10px;
+    background-color: rgb(214, 214, 214);
+    max-width: 1280px;
+    margin: auto;
+    display: block;
+    padding-bottom: 40px;
+}
+.footer {
+    padding-bottom: 100px;
+    background-color: rgb(214, 214, 214);
+    .footerRow {
+        display: flex;
+        .list-item {
+            h6 {
+                cursor: pointer;
+                i {
+                    float: right;
+                    margin-right: 10px;
+                }
+                &.active {
+                    font-weight: 500;
+                    i {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+            dl {
+                display: none;
+                color: rgb(97, 97, 97);
+                dd{
+                    a{
+                        color: rgb(97, 97, 97); 
+                    }
+                }
+                &.active {
+                    display: unset;
+                    color: rgb(97, 97, 97);
+                }
+            }
+            #socialMedia {
+                display: block;
+                text-align: center;
+                a {
+                    align-self: center;
+                    margin: 10px 20px;
+                    font-size: larger;
+                    color: rgb(97, 97, 97);
+                }
+            }
+        }
+    }
+}
+@media (min-width: 992px) {
+    .footer {
+        background-color: rgb(214, 214, 214);
+        .footerRow {
+            .list-item {
+                flex: 0 0 15%;
+                padding: 0 15px;
+                position: relative;
+
+                &:first-child {
+                    flex: 0 0 25%;
+                }
+                h6 {
+                    i {
+                        display: none;
+                    }
+                }
+                dl {
+                    display: unset;
+                    position: absolute;
+                    top: 30px;
+                    width: 100%;
+
+                    &.CONTACT {
+                        padding: 0px;
+                        position: unset;
+                    }
+                }
+                #socialMedia {
+                    a {
+                        margin: 0px 5px;
+                    }
+                }
+            }
+        }
+    }
+}

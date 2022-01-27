@@ -1,0 +1,66 @@
+
+
+
+
+.services{
+    background-color: bisque;
+    padding: 120px 0px 30px 0px;
+    .bread-cramp{
+        text-align: center;
+    }
+    h1{
+        text-align: center;
+    
+    }
+    .container{
+        .row{
+            &.optionRow{
+                background-color: #fff;
+                padding: 10px;
+                border-radius: 5px;
+                
+                div{
+                    margin: 0px !important;
+                    padding: 0px !important;
+                    div{
+                        margin: 5px 0px !important;
+                        &.input-group{
+                            padding: 0px 10px !important;
+                            .input-group-color{
+                                margin-left: auto !important;
+                                max-width: 70% !important;
+                                width: 100%;
+                
+                                padding-bottom: 20px;
+                                button {
+                                    border:1px solid rgb(128, 128, 128);
+                                    border-radius: 50%;
+                                    padding: 10px;
+                                    margin: auto;
+                                    &.active{
+                                        border:3px solid black;
+                                    }
+                                }
+                            }
+                            .form-select{
+                                margin-left: auto !important;
+                                max-width: 70% !important;
+                                text-decoration: none;
+                                box-shadow: none;
+                                border: none;
+                                border: solid gray 2px ;
+                                border-radius:  30px !important; 
+                            }
+                            .input-group-text{
+                                text-decoration: none;
+                                box-shadow: none;
+                                border: none;
+                                background-color: transparent;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
