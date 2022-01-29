@@ -1,0 +1,320 @@
+.product {
+  background-color: bisque;
+  padding: 120px 0px 30px 0px;
+}
+
+.product .bread-cramp {
+  text-align: center;
+}
+
+.product h1 {
+  text-align: center;
+}
+
+.product .productBox {
+  border-radius: 5px;
+  margin: auto;
+  width: 100%;
+  background-color: white;
+  padding: 5px;
+}
+
+.product .productBox .product-left {
+  text-align: center;
+  padding: 2px;
+}
+
+.product .productBox .product-left img {
+  width: 100% !important;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 3px;
+}
+
+.product .productBox .product-center {
+  text-align: center;
+}
+
+.product .productBox .product-center div {
+  display: inline-block;
+  padding: 2px;
+  margin: 1px;
+}
+
+.product .productBox .product-right em {
+  font-size: 3rem;
+}
+
+.product .productBox .product-right .color button {
+  margin: 0;
+  background-color: transparent;
+  border: solid 2px #c4c4c4;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-radius: 30px;
+}
+
+.product .productBox .product-right .number-of {
+  display: inline-block;
+}
+
+.product .productBox .product-right .number-of ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.product .productBox .product-right .number-of ul li {
+  margin: 0;
+  padding: 0;
+}
+
+.product .productBox .product-right .number-of ul li p {
+  border-top: solid 2px #c4c4c4;
+  border-bottom: solid 2px #c4c4c4;
+  margin: 0;
+  padding: 7px 5px;
+  text-align: center;
+  cursor: default;
+}
+
+.product .productBox .product-right .number-of ul li button {
+  font-size: 12px;
+  padding: 10px 20px;
+  margin: 0;
+  background-color: transparent;
+  border: solid 2px #c4c4c4;
+  /*  padding: 0px 12px;*/
+}
+
+.product .productBox .product-right .number-of ul li button.left {
+  padding-right: 15px;
+  border-right: none;
+  border-radius: 30px 0px 0px 30px;
+}
+
+.product .productBox .product-right .number-of ul li button.left:hover {
+  background-image: -webkit-gradient(linear, left top, right top, from(#999999), color-stop(#d9d9d9), to(white));
+  background-image: linear-gradient(to right, #999999, #d9d9d9, white);
+}
+
+.product .productBox .product-right .number-of ul li button.right {
+  padding-left: 15px;
+  border-left: none;
+  border-radius: 0px 30px 30px 0px;
+}
+
+.product .productBox .product-right .number-of ul li button.right:hover {
+  background-image: -webkit-gradient(linear, left top, right top, from(white), color-stop(#d9d9d9), to(#999999));
+  background-image: linear-gradient(to right, white, #d9d9d9, #999999);
+}
+
+.product .productBox .product-right .number-of ul li button:hover {
+  border-color: #b1b1b1;
+}
+
+.product .productBox .product-right .add-to-cart {
+  display: inline;
+}
+
+.product .productBox .product-right .add-to-cart button {
+  margin: 0;
+  background-color: transparent;
+  border: solid 2px #c4c4c4;
+  border-radius: 30px;
+  padding: 7px 20px;
+  background-color: #87ca22;
+  color: white;
+  /*
+                    &:focus{
+                        background-color: rgb(105, 168, 9);
+                        box-shadow: 1px 1px 10px rgb(105, 168, 9);
+                    }*/
+}
+
+.product .productBox .product-right .add-to-cart button:hover {
+  background-color: #86c22b;
+}
+
+.product .productBox .product-right .product-about {
+  margin: 10px 0px;
+}
+
+.product .productBox .product-right .social-media {
+  padding: 20px 0px;
+}
+
+.product .productBox .product-right .social-media span {
+  color: #8f8f8f;
+  margin-right: 10%;
+}
+
+.product .productBox .product-right .social-media a {
+  margin: 0px 5px;
+  padding: 3px 5px;
+  text-decoration: none;
+  color: #8f8f8f;
+}
+
+.product .productBox .productInfo {
+  margin-top: 25px;
+  padding: 0px;
+}
+
+.product .productBox .productInfo ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.product .productBox .productInfo ul li {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin: auto;
+}
+
+.product .productBox .productInfo ul li button {
+  margin-bottom: -10px;
+  padding: 15px;
+  color: #8f8f8f;
+  background-color: transparent;
+  border-radius: 10px 10px 0px 0px;
+  border: none;
+}
+
+.product .productBox .productInfo ul li button.productInfoBtnActive {
+  color: white;
+  background-color: #0e0e13;
+  -webkit-box-shadow: 2px 2px 10px black;
+          box-shadow: 2px 2px 10px black;
+}
+
+.product .productBox .productInfo .productInfo-dropdown {
+  margin: -5px;
+  color: white;
+  background-color: #0e0e13;
+}
+
+.product .productBox .productInfo .productInfo-dropdown div {
+  display: none;
+  padding: 20px;
+  width: 100%;
+}
+
+.product .productBox .productInfo .productInfo-dropdown div.productInfoBtnActive {
+  display: unset;
+}
+
+.product .productBox .productInfo .productInfo-dropdown div ul {
+  display: unset;
+  padding: 0px 10px;
+}
+
+.product .productBox .productInfo .productInfo-dropdown div ul li {
+  padding: 0px 20px;
+}
+
+.product .productBox .productInfo .productInfo-dropdown div ul li p {
+  padding: 0px 0px;
+  margin: 0px;
+}
+
+.imgBox:hover .item-overlay {
+  display: unset;
+}
+
+.img-overlay {
+  background-color: rgba(0, 0, 0, 0.911);
+  -webkit-transition: all, 0.15s;
+  transition: all, 0.15s;
+  position: fixed;
+  display: none;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 100000 !important;
+  padding: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.img-overlay img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+}
+
+@media (min-width: 992px) {
+  .product .productBox .productInfo {
+    margin-top: 25px;
+    padding: 0px;
+  }
+  .product .productBox .productInfo ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0px 10%;
+  }
+  .product .productBox .productInfo ul li {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin: auto;
+  }
+  .product .productBox .productInfo ul li button {
+    padding: 15px 30px;
+    color: #8f8f8f;
+    background-color: transparent;
+    border-radius: 10px 10px 0px 0px;
+    border: none;
+  }
+  .product .productBox .productInfo ul li button.productInfoBtnActive {
+    color: white;
+    background-color: #0e0e13;
+  }
+  .product .productBox .productInfo .productInfo-dropdown {
+    margin: -5px;
+    color: white;
+    background-color: #0e0e13;
+  }
+  .product .productBox .productInfo .productInfo-dropdown div {
+    display: none;
+    padding: 20px;
+    width: 100%;
+  }
+  .product .productBox .productInfo .productInfo-dropdown div.productInfoBtnActive {
+    display: unset;
+  }
+  .product .productBox .productInfo .productInfo-dropdown div ul {
+    padding: 0px 10px;
+  }
+  .product .productBox .productInfo .productInfo-dropdown div ul li {
+    padding: 0px 20px;
+  }
+  .product .productBox .productInfo .productInfo-dropdown div ul li p {
+    padding: 0px 0px;
+    margin: 0px;
+  }
+}
+/*# sourceMappingURL=product.css.map */

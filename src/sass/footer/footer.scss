@@ -34,7 +34,7 @@ body {
                     float: right;
                     margin-right: 10px;
                 }
-                &.active {
+                &.footerBtnActive {
                     font-weight: 500;
                     i {
                         transform: rotate(180deg);
@@ -49,7 +49,7 @@ body {
                         color: rgb(97, 97, 97); 
                     }
                 }
-                &.active {
+                &.footerBtnActive {
                     display: unset;
                     color: rgb(97, 97, 97);
                 }

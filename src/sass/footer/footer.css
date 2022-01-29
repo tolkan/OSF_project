@@ -48,11 +48,11 @@ body {
   margin-right: 10px;
 }
 
-.footer .footerRow .list-item h6.active {
+.footer .footerRow .list-item h6.footerBtnActive {
   font-weight: 500;
 }
 
-.footer .footerRow .list-item h6.active i {
+.footer .footerRow .list-item h6.footerBtnActive i {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
@@ -66,7 +66,7 @@ body {
   color: #616161;
 }
 
-.footer .footerRow .list-item dl.active {
+.footer .footerRow .list-item dl.footerBtnActive {
   display: unset;
   color: #616161;
 }

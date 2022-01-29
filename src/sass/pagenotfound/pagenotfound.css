@@ -1,0 +1,107 @@
+#notFound {
+  padding-top: 120px;
+  padding-bottom: 50px;
+  min-height: 100vh;
+  background-color: #dddcdc;
+}
+
+#notFound .breadcramp {
+  margin: 40px 0px;
+}
+
+#notFound .breadcramp div {
+  text-align: center;
+}
+
+#notFound .breadcramp div:first-child {
+  margin-bottom: 20px;
+}
+
+#notFound .breadcramp div a {
+  margin: auto 10px;
+  color: #198754;
+}
+
+#notFound .breadcramp div p {
+  margin: auto 10px;
+  display: inline-block;
+}
+
+#notFound .breadcramp div hr {
+  display: inline-block;
+  width: 33%;
+  min-width: 70px;
+  background-color: black;
+  margin: 10px;
+}
+
+#notFound .breadcramp div h1 {
+  padding: 0px;
+  margin: 0px;
+  display: inline-block;
+}
+
+#notFound .notFoundContainer {
+  background-color: white;
+  border-radius: 8px;
+  background-size: cover;
+}
+
+#notFound .notFoundContainer .pagenotfoundBgImg {
+  display: none;
+}
+
+#notFound .notFoundContainer .notFoundDetail h2 {
+  text-align: center;
+  margin: 30px 0px;
+}
+
+#notFound .notFoundContainer .notFoundDetail .form-control {
+  border-width: 2px;
+  border-radius: 25px;
+  text-decoration: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#notFound .notFoundContainer .notFoundDetail .form-control:focus {
+  border-color: #198754;
+}
+
+#notFound .notFoundContainer .notFoundDetail a {
+  color: #198754;
+}
+
+#notFound .notFoundContainer .notFoundDetail .SearchOurSiteBox {
+  margin: 50px 0px;
+  position: relative;
+}
+
+#notFound .notFoundContainer .notFoundDetail .SearchOurSiteBox .SearchIcon {
+  position: absolute;
+  bottom: 8px;
+  right: 10px;
+  font-size: 24px;
+  color: #888;
+  cursor: pointer;
+}
+
+@media (min-width: 992px) {
+  #notFound .breadcramp div hr {
+    width: 40%;
+    margin: 15px;
+  }
+  #notFound .notFoundContainer {
+    background-image: none;
+  }
+  #notFound .notFoundContainer .pagenotfoundBgImg {
+    display: unset;
+    background-image: url("../../img/Ekran Resmi 2022-01-29 05.56.28.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  #notFound .notFoundContainer .notFoundDetail {
+    padding: 20px 60px 50px 20px;
+  }
+}
+/*# sourceMappingURL=pagenotfound.css.map */

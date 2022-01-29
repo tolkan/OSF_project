@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/2179bef801.js" crossorigin="anonymous"></script>
-	<link rel="stylesheet" type="text/css" href="../sass/nav/nav.css">
+    <link rel="stylesheet" type="text/css" href="../sass/nav/nav.css">
+    <link rel="stylesheet" type="text/css" href="../sass/login/login.css">
 </head>
 
 <body>
 
     <!-- header start -->
     <header class="header">
-        <div class="container headerCont " >
+        <div class="container headerCont ">
             <div class="v-center d-flex flex-row">
                 <div class="header-item item-left ">
 
@@ -21,16 +21,16 @@
                     <div class="mobile-menu-close "> <span>&times;</span></div>
 
                     <div class="logo">
-                        <a href="#"></a>
+                        <a href="/src/pages/home.html"></a>
                     </div>
-                    
+
                 </div>
                 <div class="mobile-logo">
-                    <a href="#"></a>
+                    <a href="/src/pages/home.html"></a>
                 </div>
                 <!-- menu start here -->
                 <div class="header-item item-center ">
-                    <nav class="menu" >
+                    <nav class="menu">
                         <ul class="menu-main">
                             <li class="menu-item-has-children">
                                 <a href="#">SERVİCES <i class="fa fa-angle-down"></i></a>
@@ -90,7 +90,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li >
+                            <li>
                                 <a href="#">COMPANY</a>
                             </li>
                             <li>
@@ -109,7 +109,7 @@
                                     <option value="TR">TR</option>
                                 </select>
                             </li>
-                            <li class="custom-select"> 
+                            <li class="custom-select">
                                 <select class="custSelect">
                                     <option value="EN">$ <small>USD</small></option>
                                     <option value="FR">€ <small>EUR</small></option>
@@ -121,17 +121,50 @@
                 </div>
                 <!-- menu end here -->
                 <div class="header-item item-right">
-                    <a href="#"><i class="fas fa-search"></i></a> 
-                    <a href="#"><i class="far fa-user"></i></a>
+                    <a href="#"><i class="fas fa-search"></i></a>
+                    <a id="loginBtn"><i class="far fa-user"></i></a>
                     <a href="#"><i class="far fa-heart"></i></a>
                     <a href="#"><i class="fas fa-shopping-bag"></i></a>
                     <!-- mobile menu trigger -->
-               
+
                 </div>
             </div>
         </div>
     </header>
     <!-- header end -->
+
+    <div id="loginModal" class="modal">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-6 m-auto">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <div class="loginForm">
+                            <h2>Sign in</h2>
+                            <form>
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp">
+                                </div>
+                                <div class="mb-3 passwordBox">
+                                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                                    <a class="forgotPassword" href=""> forgot password</a>
+                                    <input type="password" class="form-control" id="exampleInputPassword1">
+                                    <i class="far eyeBtn fa-eye"></i>
+                                </div>
+                                <div class="mb-3 formSubmit">
+                                    <button type="submit" class="btn btn-success">LOGIN</button>
+                                    <a href="#"> I don't have an account.</a>
+                                </div>
+                              
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="../javaScript/nav.js"></script>
 </body>

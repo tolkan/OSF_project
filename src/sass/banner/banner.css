@@ -1,3 +1,24 @@
+body {
+  line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  overflow-x: hidden;
+  background-color: #eeeeee;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:before,
+:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 .banner {
   background: url(../../img/banner.jpg) no-repeat 0, 0, #005fb8;
   background-blend-mode: multiply;

@@ -8,92 +8,61 @@
 	<link rel="stylesheet" type="text/css" href="../sass/featuredProduct/featuredProduct.css">
 </head>
 
-<body>
-	<div class="featuredProduct">
+<body >
+	<div class="featuredProduct" onload="loadFeaturedProductCardBox()">
 		<div>
 			<h2>Featured Product</h2>
 			<p> Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-			<button><i class="fas fa-angle-left"></i></button>
-			<hr> ///
-			<hr><button><i class="fas fa-angle-right"></i></button>
+			<button class="angleLeft m-0" ><i class="fas fa-angle-left"></i></button>
+			<hr> 
+			<span>///</span>
+			<hr>
+			<button class="angleRight m-0"><i class="fas fa-angle-right"></i></button>
 		</div>
 		<div class="container">
-			<div class="row cardBox">
-
-				<div class=" col-12 col-lg-3 p-2 ">
-					<div class="card">
-						<img src="../img/banner.jpg" class="card-img-top" alt="...">
-						<div class="card-body">
-							<h6 class="card-title">Card with stretched link</h6>
-							<a href="#" class="btn ">Go somewhere</a>
-						</div>
-					</div>
-				</div>
-
-				<div class=" col-12 col-lg-3 p-2 ">
-					<div class="card">
-						<img src="../img/banner.jpg" class="card-img-top" alt="...">
-						<div class="card-body">
-							<h6 class="card-title">Card with stretched link</h6>
-							<a href="#" class="btn ">Go somewhere</a>
-						</div>
-					</div>
-				</div>
-
-				<div class=" col-12 col-lg-3 p-2 ">
-					<div class="card">
-						<img src="../img/banner.jpg" class="card-img-top" alt="...">
-						<div class="card-body">
-							<h6 class="card-title">Card with stretched link</h6>
-							<a href="#" class="btn ">Go somewhere</a>
-						</div>
-					</div>
-				</div>
-
-				<div class=" col-12 col-lg-3 p-2 ">
-					<div class="card">
-						<img src="../img/banner.jpg" class="card-img-top" alt="...">
-						<div class="card-body">
-							<h6 class="card-title">Card with stretched link</h6>
-							<a href="#" class="btn ">Go somewhere</a>
-						</div>
-					</div>
-				</div>
+			<div class="row featuredProductCardBox">
 				
-
-
-				<!-- 	<div class="col-12 col-lg-3">
-					<div class="card" style="width: 18rem;">
-						<img src="../img/p1.jpg" class="card-img-top" alt="...">
+				<div class="col-12 col-lg-3 p-2 featuredProductCard featuredProductActive">
+					<div class="card">
+						<img src="https://picsum.photos/200/100" class="card-img-top" alt="...">
 						<div class="card-body">
 							<h6 class="card-title">Card with stretched link</h6>
 							<a href="#" class="btn ">Go somewhere</a>
 						</div>
 					</div>
 				</div>
-				<div class="col-12 col-lg-3">
-					<div class="card" style="width: 18rem;">
-						<img src="../img/p2.jpg" class="card-img-top" alt="...">
+				<div class="col-12 col-lg-3 p-2 featuredProductCard featuredProductActive">
+					<div class="card">
+						<img src="https://picsum.photos/201/100" class="card-img-top" alt="...">
 						<div class="card-body">
 							<h6 class="card-title">Card with stretched link</h6>
 							<a href="#" class="btn ">Go somewhere</a>
 						</div>
 					</div>
 				</div>
-				<div class="col-12 col-lg-3">
-					<div class="card" style="width: 18rem;">
-						<img src="../img/p3.jpg" class="card-img-top" alt="...">
+				<div class="col-12 col-lg-3 p-2 featuredProductCard featuredProductActive">
+					<div class="card">
+						<img src="https://picsum.photos/200/101" class="card-img-top" alt="...">
 						<div class="card-body">
 							<h6 class="card-title">Card with stretched link</h6>
 							<a href="#" class="btn ">Go somewhere</a>
 						</div>
 					</div>
-				</div>-->
-
+				</div>
+				<div class="col-12 col-lg-3 p-2 featuredProductCard featuredProductActive">
+					<div class="card">
+						<img src="https://picsum.photos/201/101" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h6 class="card-title">Card with stretched link</h6>
+							<a href="#" class="btn ">Go somewhere</a>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
-
+	<script src="../javaScript/featuredProduct.js"></script>
+	
 </body>
 
 </html>

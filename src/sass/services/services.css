@@ -11,44 +11,44 @@
   text-align: center;
 }
 
-.services .container .row.optionRow {
+.services .optionRow {
   background-color: #fff;
   padding: 10px;
   border-radius: 5px;
 }
 
-.services .container .row.optionRow div {
+.services .optionRow div {
   margin: 0px !important;
   padding: 0px !important;
 }
 
-.services .container .row.optionRow div div {
+.services .optionRow div div {
   margin: 5px 0px !important;
 }
 
-.services .container .row.optionRow div div.input-group {
+.services .optionRow div div.input-group {
   padding: 0px 10px !important;
 }
 
-.services .container .row.optionRow div div.input-group .input-group-color {
+.services .optionRow div div.input-group .input-group-color {
   margin-left: auto !important;
   max-width: 70% !important;
   width: 100%;
   padding-bottom: 20px;
 }
 
-.services .container .row.optionRow div div.input-group .input-group-color button {
+.services .optionRow div div.input-group .input-group-color button {
   border: 1px solid gray;
   border-radius: 50%;
   padding: 10px;
   margin: auto;
 }
 
-.services .container .row.optionRow div div.input-group .input-group-color button.active {
+.services .optionRow div div.input-group .input-group-color button.colorBadgeActive {
   border: 3px solid black;
 }
 
-.services .container .row.optionRow div div.input-group .form-select {
+.services .optionRow div div.input-group .form-select {
   margin-left: auto !important;
   max-width: 70% !important;
   text-decoration: none;
@@ -59,11 +59,36 @@
   border-radius: 30px !important;
 }
 
-.services .container .row.optionRow div div.input-group .input-group-text {
+.services .optionRow div div.input-group .input-group-text {
   text-decoration: none;
   -webkit-box-shadow: none;
           box-shadow: none;
   border: none;
   background-color: transparent;
+}
+
+.load {
+  border: solid 2px #fff;
+  border-radius: 30px;
+  color: #fff;
+  background-color: #6fa320;
+  width: 250px;
+  padding: 5px 20px;
+  margin: 5px auto;
+}
+
+.remove {
+  border: solid 2px #fff;
+  border-radius: 30px;
+  color: #fff;
+  background-color: #a32036;
+  width: 250px;
+  padding: 5px 20px;
+  margin: 5px auto;
+  display: none;
+}
+
+.remove.removeBtnActive {
+  display: unset;
 }
 /*# sourceMappingURL=services.css.map */

@@ -20,20 +20,31 @@
             width: 10%;
             min-width: 70px;
             background-color: white;
-            margin: 0px;
+            margin: 5px;
         }
     }
-    .cardBox {
+    .featuredProductCardBox {
         margin-top: 10px;
-        .card {
-            color: black;
-            margin: auto;
-        }
-        .card-img-top {
 
-            display: block;
-            overflow: hidden;
+        div {
+            transform: translateY(0);
+            opacity: 1;
+            .card {
+                color: black;
+                margin: auto;
+            }
+            .card-img-top {
+                display: block;
+                overflow: hidden;
+                height: 150px;
+                width: 220;
+                object-fit: cover;
+            }
+            .featuredProductActive{
+                transform: translateX(150px);
+                opacity: 0;
+                transition: 1s all ease;
+            }
         }
     }
-   
 }

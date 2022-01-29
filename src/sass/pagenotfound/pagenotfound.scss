@@ -1,0 +1,102 @@
+$green-color: #198754;
+
+#notFound {
+    padding-top: 120px;
+    padding-bottom: 50px;
+    min-height: 100vh;
+    background-color: rgb(221, 220, 220);
+    .breadcramp {
+        margin: 40px 0px;
+        div {
+            &:first-child {
+                margin-bottom: 20px;
+            }
+            text-align: center;
+            a {
+                margin: auto 10px;
+                color: $green-color;
+            }
+            p {
+                margin: auto 10px;
+                display: inline-block;
+            }
+            hr {
+                display: inline-block;
+                width: 33%;
+                min-width: 70px;
+                background-color: black;
+                margin: 10px;
+            }
+            h1 {
+                padding: 0px;
+                margin: 0px;
+                display: inline-block;
+            }
+        }
+    }
+    .notFoundContainer {
+        background-color: white;
+        border-radius: 8px;
+        background-size: cover;
+        .pagenotfoundBgImg {
+            display: none;
+        }
+
+        .notFoundDetail {
+            h2 {
+                text-align: center;
+                margin: 30px 0px;
+            }
+            .form-control {
+                border-width: 2px;
+                border-radius: 25px;
+                text-decoration: none;
+                box-shadow: none;
+                &:focus {
+                    border-color: $green-color;
+                }
+            }
+            a {
+                color: $green-color;
+            }
+
+            .SearchOurSiteBox {
+                margin: 50px 0px;
+                position: relative;
+                .SearchIcon {
+                    position: absolute;
+                    bottom: 8px;
+                    right: 10px;
+                    font-size: 24px;
+                    color: #888;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    #notFound {
+        .breadcramp {
+            div {
+                hr {
+                    width: 40%;
+                    margin: 15px;
+                }
+            }
+        }
+        .notFoundContainer {
+            background-image: none;
+            .pagenotfoundBgImg {
+                display: unset;
+                background-image: url("../../img/Ekran\ Resmi\ 2022-01-29\ 05.56.28.png") ;
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+            .notFoundDetail {
+                padding: 20px 60px 50px 20px;
+            }
+        }
+    }
+}

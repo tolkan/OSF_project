@@ -1,9 +1,11 @@
-@mixin Button($color) {
+@mixin LoadRemoveButton($color) {
     border: solid 2px $color;
     border-radius: 30px;
     color: $color;
     background-color: rgba(255, 255, 255, 0);
-    padding: 12px 33px;
+    width: 250px;
+    padding: 5px 20px;
+    margin: 5px auto;
 }
 
 .carousel {
@@ -54,11 +56,30 @@
     }
 }
 .load {
-    @include Button(#fff);
-    width: 300px;
-    padding: 5px 30px;
-    margin: auto;
+    text-align: center;
+    button {
+        @include LoadRemoveButton(#fff);
+        max-width: 250px;
+        padding: 5px 30px;
+        margin: auto;
+    }
 }
+.remove {
+    text-align: center;
+    display: none;
+   
+    button {
+        @include LoadRemoveButton(#fff);
+        max-width: 250px;
+        padding: 5px 20px;
+        margin: auto;
+        margin-top: 30px;
+    }
+    &.removeBtnActive {
+        display: unset;
+    }
+}
+
 .cardBox {
     .card {
         .card-body {
@@ -224,16 +245,19 @@
     display: none;
     .cardBox {
         .card {
+            border: solid 1px tomato;
+            max-height: 500px;
+            min-height: 500px;
             border: none;
             height: 100%;
             display: flex;
             .card-img-top {
-                flex: 0 0 65%;
+                flex: 0 0 70%;
                 object-fit: cover;
-                min-height: 65%;
+                min-height: 70%;
             }
             .card-body {
-                flex: 0 0 35%;
+                flex: 0 0 30%;
                 text-align: center;
                 position: relative;
                 height: 100%;

@@ -22,20 +22,38 @@
   width: 10%;
   min-width: 70px;
   background-color: white;
-  margin: 0px;
+  margin: 5px;
 }
 
-.featuredProduct .cardBox {
+.featuredProduct .featuredProductCardBox {
   margin-top: 10px;
 }
 
-.featuredProduct .cardBox .card {
+.featuredProduct .featuredProductCardBox div {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+}
+
+.featuredProduct .featuredProductCardBox div .card {
   color: black;
   margin: auto;
 }
 
-.featuredProduct .cardBox .card-img-top {
+.featuredProduct .featuredProductCardBox div .card-img-top {
   display: block;
   overflow: hidden;
+  height: 150px;
+  width: 220;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.featuredProduct .featuredProductCardBox div .featuredProductActive {
+  -webkit-transform: translateX(150px);
+          transform: translateX(150px);
+  opacity: 0;
+  -webkit-transition: 1s all ease;
+  transition: 1s all ease;
 }
 /*# sourceMappingURL=featuredProduct.css.map */

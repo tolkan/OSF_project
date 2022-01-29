@@ -3,17 +3,17 @@ listItems.forEach(element => {
     element.addEventListener("click", () => {
         let title = element.querySelector("h6")
         let item = document.querySelectorAll(`.${title.className}`)
-        if (!title.classList.contains("active")) {
-            document.querySelectorAll(".active").forEach(e => {
-                e.classList.remove("active");
+        if (!title.classList.contains("footerBtnActive")) {
+            document.querySelectorAll(".footerBtnActive").forEach(e => {
+                e.classList.remove("footerBtnActive");
             })
             item.forEach(e => {
-                e.classList.add("active")
+                e.classList.add("footerBtnActive")
             })
         }
         else {
-            document.querySelectorAll(".active").forEach(e => {
-                e.classList.remove("active");
+            document.querySelectorAll(".footerBtnActive").forEach(e => {
+                e.classList.remove("footerBtnActive");
             })
         }
     })
