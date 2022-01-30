@@ -44,7 +44,11 @@
 #notFound .notFoundContainer {
   background-color: white;
   border-radius: 8px;
-  background-size: cover;
+  background: url("../../img/Ekran Resmi 2022-01-29 05.56.28.png") no-repeat 0, 0, rgba(255, 255, 255, 0.699);
+  background-blend-mode: screen;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 #notFound .notFoundContainer .pagenotfoundBgImg {

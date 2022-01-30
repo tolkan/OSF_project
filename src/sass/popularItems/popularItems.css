@@ -65,6 +65,10 @@
   margin: auto;
 }
 
+.load.loadBtnPassive {
+  display: none;
+}
+
 .remove {
   text-align: center;
   display: none;
@@ -99,6 +103,9 @@
 
 .cardBox .card .card-body .btn-group .btn {
   padding: 3px;
+  text-decoration: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .cardBox .card .card-body .btn-group .btn.btn-left {
@@ -116,12 +123,12 @@
 .cardBox .card .card-body .btn-group .btn:hover {
   color: white;
   background-color: rgba(35, 155, 55, 0.9);
-  border: solid #239b37 2px;
+  border: solid #239b37 1px;
 }
 
 .cardBox .card:hover .item-overlay {
   display: block;
-  background-color: rgba(35, 155, 55, 0.644);
+  background-color: rgba(3, 77, 48, 0.7);
   -webkit-transition: all 0.15s;
   transition: all 0.15s;
   width: 100%;
@@ -216,19 +223,15 @@
 }
 
 .cardBox .item-overlay .fas.fa-plus {
-  color: rgba(35, 155, 55, 0.644);
-}
-
-.cardBox .item-overlay .fas.fa-plus:hover {
-  -webkit-box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.5);
-          box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.5);
+  color: #034d2f;
 }
 
 .cardBox .item-overlay .fas.fa-heart {
   color: palevioletred;
 }
 
-.cardBox .item-overlay .fas.fa-heart:hover {
+.cardBox .item-overlay .fas:hover {
+  cursor: pointer;
   -webkit-box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.5);
           box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.5);
 }
@@ -277,7 +280,6 @@
 }
 
 #popularItemsWeb .cardBox .card {
-  border: solid 1px tomato;
   max-height: 500px;
   min-height: 500px;
   border: none;
@@ -307,6 +309,22 @@
 
 #popularItemsWeb .cardBox .card .card-body .btn-group {
   bottom: 5px;
+}
+
+#popularItemsWeb .cardBox .card a {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 70%;
+          flex: 0 0 70%;
+  min-height: 70%;
+  max-height: 350px;
+}
+
+#popularItemsWeb .cardBox .card a .card-img-top {
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 #popularItemsWeb .cardBox .item-overlay .fas {

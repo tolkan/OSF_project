@@ -1,0 +1,44 @@
+{
+    "popular_items": [
+        {
+            "item_name": "product Title 1",
+            "item_price": " 1,320.43",
+            "item_url": "https://picsum.photos/450/600"
+        },
+        {
+            "item_name": "product Title 2",
+            "item_price": " 2,320.43",
+            "item_url": "https://picsum.photos/451/600"
+        },
+        {
+            "item_name": "product Title 3",
+            "item_price": " 3,320.43",
+            "item_url": "https://picsum.photos/452/600"
+        },
+        {
+            "item_name": "product Title 4",
+            "item_price": " 4,320.43",
+            "item_url": "https://picsum.photos/453/600"
+        },
+        {
+            "item_name": "product Title 5",
+            "item_price": " 5,320.43",
+            "item_url": "https://picsum.photos/454/600"
+        },
+        {
+            "item_name": "product Title 6",
+            "item_price": " 6,320.43",
+            "item_url": "https://picsum.photos/450/601"
+        },
+        {
+            "item_name": "product Title 7",
+            "item_price": " 7,320.43",
+            "item_url": "https://picsum.photos/450/603"
+        },
+        {
+            "item_name": "product Title 8",
+            "item_price": " 8,320.43",
+            "item_url": "https://picsum.photos/450/602"
+        }
+    ]
+}
