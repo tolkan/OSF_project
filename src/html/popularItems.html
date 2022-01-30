@@ -8,16 +8,15 @@
 	<link rel="stylesheet" type="text/css" href="../sass/popularItems/popularItems.css">
 </head>
 
-<body>
+<body onload="init">
 	<div id="popularItems">
-		<div class="title">
+		<div class="title mb-5">
 			<hr>
 			<h3> Popular Items </h3>
 			<hr>
 		</div>
 		<div class="container">
 			<div id="popularItemsMobile">
-
 				<div id="carousel2" class="carousel slide" data-bs-ride="carousel">
 					<div class="carousel-inner">
 						<div class="carousel-item active">
@@ -38,10 +37,13 @@
 						<div class="carousel-item">
 							<div class="cardBox">
 								<div class="card">
-									<img src="https://picsum.photos/541/600" class="card-img-top" alt="...">
+									<a href="../pages/pdp.html">
+										<img src="https://picsum.photos/541/600" class="card-img-top" alt="...">
+									</a>
 									<div class="card-body">
 										<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident!</p>
-										<div class="btn-group m-0 p-0" role="group" aria-label="Basic outlined example">
+										<div class="PopularProductsBtnGroup btn-group m-0 p-0" role="group"
+											aria-label="Basic outlined example">
 											<button type="button" class="btn btn-left"> <em>$659.55</em> </button>
 											<button type="button" class="btn btn-right">BUY NOW</button>
 										</div>
@@ -111,10 +113,13 @@
 					</div>
 					<div class="cardBox col-3 p-2 ">
 						<div class="card">
-							<img src="https://picsum.photos/450/600" class="card-img-top" alt="...">
+							<a href="../pages/pdp.html">
+								<img src="https://picsum.photos/450/600" class="card-img-top" alt="...">
+							</a>
 							<div class="card-body">
 								<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident!</p>
-								<div class="btn-group m-0 p-0" role="group" aria-label="Basic outlined example">
+								<div class="PopularProductsBtnGroup btn-group m-0 p-0" role="group"
+									aria-label="Basic outlined example">
 									<button type="button" class="btn btn-left"> <em>$659.55</em> </button>
 									<button type="button" class="btn btn-right">BUY NOW</button>
 								</div>
@@ -138,23 +143,22 @@
 					</div>
 				</div>
 				<div class="row my-3">
-					<div class="load col-12 col-sm-6 my-0 mx-auto" >
+					<div class="load col-12 col-sm-6 my-0 mx-auto">
 						<button class="my-0 mx-auto">
 							LOAD MORE <i class="fas fa-redo"></i>
 						</button>
 					</div>
 					<div class="remove col-12 col-sm-6 my-0 mx-auto">
 						<button class=" my-0 mx-auto ">
-							REMOVE <i class="fas fa-redo"></i>
+							LESS<i class="fas fa-redo"></i>
 						</button>
 					</div>
-
-
 				</div>
 
 			</div>
 		</div>
 	</div>
+	<script src="../javaScript/card_like.js"></script>
 	<script src="../javaScript/popularItems.js"></script>
 </body>
 

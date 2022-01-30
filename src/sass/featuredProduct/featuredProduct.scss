@@ -25,7 +25,7 @@
     }
     .featuredProductCardBox {
         margin-top: 10px;
-
+        scroll-behavior: smooth;
         div {
             transform: translateY(0);
             opacity: 1;

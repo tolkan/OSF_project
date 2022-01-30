@@ -27,6 +27,7 @@
 
 .featuredProduct .featuredProductCardBox {
   margin-top: 10px;
+  scroll-behavior: smooth;
 }
 
 .featuredProduct .featuredProductCardBox div {

@@ -1,13 +1,15 @@
-
 const menu = document.querySelector(".menu");
 const menuMain = menu.querySelector(".menu-main");
 const menuTrigger = document.querySelector(".mobile-menu-trigger");
 const closeMenu = document.querySelector(".mobile-menu-close");
-let modal = document.querySelector("#loginModal");
+let LoginModel = document.querySelector("#loginModal");
+let modals = document.querySelectorAll('.modal');
 let loginBtn = document.querySelector("#loginBtn");
-var span = document.querySelectorAll(".close")[0];
+var span = document.querySelectorAll(".close");
 const eyeBtn = document.querySelector(".eyeBtn")
 const password = document.querySelector("#exampleInputPassword1")
+let cookieModal = document.querySelector("#cookiesPolicy");
+var acceptCookiesBtn = document.querySelector(".acceptCookies")
 
 
 menuMain.addEventListener("click", (e) => {
@@ -67,28 +69,61 @@ window.onresize = function () {
 
 // When the user clicks the button, open the modal 
 loginBtn.addEventListener("click", () => {
-   modal.style.display = "block";
+   LoginModel.style.display = "block";
 });
 
-span.addEventListener("click", () => {
-   modal.style.display = "none";
+span.forEach(element => {
+   element.addEventListener("click", () => {
+      closeModel();
+   });
 });
 
 window.addEventListener("click", (event) => {
-   if (event.target == modal) {
-      modal.style.display = "none";
-   }
+   modals.forEach(e => {
+      if (event.target == e) {
+         e.style.display = "none";
+      }
+   });
 });
 
-eyeBtn.addEventListener("click" , () => {
-   if(eyeBtn.classList.contains("fa-eye")){
+eyeBtn.addEventListener("click", () => {
+   if (eyeBtn.classList.contains("fa-eye")) {
       eyeBtn.classList.remove("fa-eye")
       eyeBtn.classList.add("fa-eye-slash")
       password.type = 'text'
    }
-   else{
+   else {
       eyeBtn.classList.add("fa-eye")
       eyeBtn.classList.remove("fa-eye-slash")
       password.type = 'password'
    }
 })
+
+acceptCookiesBtn.addEventListener("click", () => {
+   window.localStorage.setItem("cookie", true);
+   closeModel();
+})
+
+
+
+window.onload = function () {
+   if (!window.localStorage.getItem('cookie')) {
+      cookieModal.style.display = "block";
+   }
+   if (!window.localStorage.getItem("like")) {
+      window.localStorage.setItem("like", 0)
+   }
+   if (!window.localStorage.getItem("shoppingCard")) {
+      window.localStorage.setItem("shoppingCard", 0)
+   }
+   document.querySelector(".numberOfCart").innerHTML = window.localStorage.getItem('shoppingCard')
+   document.querySelector(".numberOfLike").innerHTML = window.localStorage.getItem('like')
+}
+window.onload(() => { });
+
+
+function closeModel() {
+   modals.forEach(e => {
+      e.style.display = "none";
+   });
+}

@@ -1,14 +1,42 @@
 .services {
-  background-color: bisque;
+  background-color: transparent;
   padding: 120px 0px 30px 0px;
 }
 
-.services .bread-cramp {
+.services .breadcramp {
+  margin: 40px 0px;
+}
+
+.services .breadcramp div {
   text-align: center;
 }
 
-.services h1 {
-  text-align: center;
+.services .breadcramp div:first-child {
+  margin-bottom: 20px;
+}
+
+.services .breadcramp div a {
+  margin: auto 10px;
+  color: #198754;
+}
+
+.services .breadcramp div p {
+  margin: auto 10px;
+  display: inline-block;
+}
+
+.services .breadcramp div hr {
+  display: inline-block;
+  width: 33%;
+  min-width: 70px;
+  background-color: black;
+  margin: 10px;
+}
+
+.services .breadcramp div h1 {
+  padding: 0px;
+  margin: 0px;
+  display: inline-block;
 }
 
 .services .optionRow {

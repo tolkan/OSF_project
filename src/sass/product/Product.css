@@ -1,14 +1,43 @@
 .product {
-  background-color: bisque;
+  overflow: scroll;
+  background-color: transparent;
   padding: 120px 0px 30px 0px;
 }
 
-.product .bread-cramp {
+.product .breadcramp {
+  margin: 40px 0px;
+}
+
+.product .breadcramp div {
   text-align: center;
 }
 
-.product h1 {
-  text-align: center;
+.product .breadcramp div:first-child {
+  margin-bottom: 20px;
+}
+
+.product .breadcramp div a {
+  margin: auto 10px;
+  color: #198754;
+}
+
+.product .breadcramp div p {
+  margin: auto 10px;
+  display: inline-block;
+}
+
+.product .breadcramp div hr {
+  display: inline-block;
+  width: 33%;
+  min-width: 70px;
+  background-color: black;
+  margin: 10px;
+}
+
+.product .breadcramp div h1 {
+  padding: 0px;
+  margin: 0px;
+  display: inline-block;
 }
 
 .product .productBox {
@@ -20,19 +49,39 @@
 }
 
 .product .productBox .product-left {
+  position: relative;
   text-align: center;
   padding: 2px;
+  max-height: 450px;
+}
+
+.product .productBox .product-left i {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  font-size: 30px;
+  color: #198754;
+}
+
+.product .productBox .product-left i:hover {
+  cursor: pointer;
+  color: #014e2a;
 }
 
 .product .productBox .product-left img {
-  width: 100% !important;
-  height: 100%;
+  width: auto;
+  max-height: 100% !important;
+  max-width: 100% !important;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 3px;
 }
 
 .product .productBox .product-center {
+  padding: 10px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
   text-align: center;
 }
 
@@ -144,6 +193,17 @@
 
 .product .productBox .product-right .product-about {
   margin: 10px 0px;
+}
+
+.product .productBox .product-right .product-about .readMore {
+  color: #198754;
+  cursor: pointer;
+}
+
+.product .productBox .product-right .product-about .showless {
+  display: none;
+  color: #a10505;
+  cursor: pointer;
 }
 
 .product .productBox .product-right .social-media {
@@ -263,6 +323,33 @@
 }
 
 @media (min-width: 992px) {
+  .product .productBox .product-left {
+    text-align: center;
+    padding: 2px;
+    max-height: unset;
+  }
+  .product .productBox .product-left img {
+    width: 100%;
+    height: 100% !important;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 3px;
+  }
+  .product .productBox .product-center {
+    text-align: center;
+    min-height: 100%;
+    max-height: 536px;
+    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+    white-space: normal;
+    text-align: center;
+  }
+  .product .productBox .product-center div {
+    display: inline-block;
+    padding: 2px;
+    margin: 1px;
+  }
   .product .productBox .productInfo {
     margin-top: 25px;
     padding: 0px;
@@ -317,4 +404,4 @@
     margin: 0px;
   }
 }
-/*# sourceMappingURL=product.css.map */
+/*# sourceMappingURL=Product.css.map */

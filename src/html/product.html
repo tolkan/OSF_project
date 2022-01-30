@@ -12,16 +12,30 @@
 <body>
     <div class="product">
         <div class="container">
-            <div class="bread-cramp">
-                <p>home / OSF Theme / Kristina Dank</p>
+            <div class="breadcramp">
+                <div>
+                    <a href="/src/pages/index.html">Home</a> <span>/</span>
+                    <p>Services</p>
+                </div>
+                <div>
+                    <hr>
+                    <h1>Services</h1>
+                    <hr>
+                </div>
             </div>
-            <h1> Product </h1>
 
             <div class="row productBox">
+
                 <div class="col-12 col-lg-5 product-left">
+                    <i class="modalArrows fas fa-expand-arrows-alt"></i>
                     <img src="../img/pdp-images/PG.10216885.JJ169XX.PZ.jpg" alt="">
-                    <div class="img-overlay">
-                        <img src="../img/pdp-images/PG.10216885.JJ169XX.PZ.jpg" alt="">
+                    <div id="ProductImgModal" class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <div class="imageBox ">
+                                <img src="../img/pdp-images/PG.10216885.JJ169XX.PZ.jpg" alt="">
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-12 col-lg-2 product-center">
@@ -37,6 +51,20 @@
                     <div>
                         <img src="../img/pdp-images//PG.10216885.JJ8UTXX.BZ-small.jpg" alt="">
                     </div>
+
+                    <div>
+                        <img src="../img/pdp-images/PG.10216885.JJ169XX.PZ-small.jpg" alt="">
+                    </div>
+                    <div>
+                        <img src="../img/pdp-images/PG.10216885.JJ169XX.BZ-small.jpg" alt="">
+                    </div>
+                    <div>
+                        <img src="../img/pdp-images/PG.10216885.JJ8UTXX.PZ-small.jpg" alt="">
+                    </div>
+                    <div>
+                        <img src="../img/pdp-images//PG.10216885.JJ8UTXX.BZ-small.jpg" alt="">
+                    </div>
+
                 </div>
                 <div class="col-12 col-lg-5 product-right">
                     <em>$299.99</em>
@@ -46,12 +74,17 @@
                             Select Color
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                            <li><a class="dropdown-item product-color"><i class="fa fa-circle" style="color: black;"></i> Black</a></li>
-                            <li><a class="dropdown-item product-color"><i class="fa fa-circle" style="color: aquamarine;"></i> Aquamarine</a></li>
-                            <li><a class="dropdown-item product-color"><i class="fa fa-circle" style="color: red;"></i> Red</a></li>
-                            <li><a class="dropdown-item product-color"><i class="fa fa-circle" style="color: orange;"></i> orange</a></li>
-                            <li><a class="dropdown-item product-color"><i class="fa fa-circle" style="color: purple;"></i> Purple</a></li>
-                            
+                            <li><a class="dropdown-item product-color"><i class="fa fa-circle"
+                                        style="color: black;"></i> Black</a></li>
+                            <li><a class="dropdown-item product-color"><i class="fa fa-circle"
+                                        style="color: aquamarine;"></i> Aquamarine</a></li>
+                            <li><a class="dropdown-item product-color"><i class="fa fa-circle" style="color: red;"></i>
+                                    Red</a></li>
+                            <li><a class="dropdown-item product-color"><i class="fa fa-circle"
+                                        style="color: orange;"></i> orange</a></li>
+                            <li><a class="dropdown-item product-color"><i class="fa fa-circle"
+                                        style="color: purple;"></i> Purple</a></li>
+
                         </ul>
                     </div>
                     <div class="number-of my-3">
@@ -60,7 +93,7 @@
                                 <button class="left" type="button"><i class="fas fa-minus"></i></button>
                             </li>
                             <li>
-                                <p>12</p>
+                                <p>0</p>
                             </li>
                             <li>
                                 <button class="right" type="button"><i class="fas fa-plus"></i></button>
@@ -71,21 +104,23 @@
                         <button>ADD TO CART</button>
                     </div>
                     <div class="product-about">
-                        <p>
+                        <p class="product-about-text">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero molestiae reiciendis est
                             provident asperiores! Iure sequi delectus impedit recusandae sapiente, nemo similique
                             perspiciatis nihil cupiditate fuga! Earum fugit mollitia qui.
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, dolore. Possimus sequi
                             ipsam vel voluptate accusantium optio reiciendis nesciunt, ipsum tempora aspernatur
-                            provident saepe atque eos impedit cum, dolore repellat?
+                            provident saepe atque eos impedit cum, dolore repellat? 
                         </p>
+                        <a class="readMore"> read more </a>
+                        <a class="showless"> showless </a>
                     </div>
                     <div class="social-media">
                         <span>Share </span>
-                        <a href=""><i class="fab fa-facebook-f"></i></a>
-                        <a href=""><i class="fab fa-google-plus-g"></i></a>
-                        <a href=""><i class="fab fa-twitter"></i></a>
-                        <a href=""><i class="fab fa-pinterest-p"></i></a>
+                        <a target="_blank"  href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                        <a target="_blank"  href="https://plus.google.com"><i class="fab fa-google-plus-g"></i></a>
+                        <a target="_blank"  href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+                        <a target="_blank"  href="https://pinterest.com/"><i class="fab fa-pinterest-p"></i></a>
                     </div>
                 </div>
                 <div class="col-12 productInfo">
@@ -157,7 +192,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> 
 
         </div>
     </div>

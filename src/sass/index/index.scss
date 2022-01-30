@@ -41,7 +41,6 @@
                     height: 100%;
                     width: auto;
                     max-width: 100%;
-                    border-radius: 8px;
                 }
                 div {
                     width: 100%;
@@ -52,7 +51,10 @@
                     padding: 10px 10px 55px 10px;
                     align-items: center;
                     color: white;
-                    background-image: linear-gradient(rgba(0, 0, 0, 0)rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)rgba(0, 0, 0, 0.9));
+                    background-image: linear-gradient(
+                        rgba(0, 0, 0, 0) rgba(0, 0, 0, 0.5),
+                        rgba(0, 0, 0, 0.7) rgba(0, 0, 0, 0.9)
+                    );
                     button {
                         @include Button(#fff);
                     }
@@ -62,18 +64,14 @@
     }
 }
 
-.col-12 {
-    padding: 5px;
-}
-.col-lg-4 {
+.indexSale {
     div {
         color: white;
-
         text-align: center;
         &.img {
-            background-color: rgb(122, 182, 31);
+            background: url(../../img/palmkopyası.png) no-repeat 0, 0, rgba(122, 182, 31, 0.849);
+            background-blend-mode: screen, difference;
             padding: 10px;
-            border: solid 3px rgb(68, 102, 17);
             border-radius: 8px;
             height: 60%;
             p {
@@ -90,6 +88,11 @@
             button {
                 @include Button(#0e1f56);
                 color: #0e1f56;
+                &:hover{
+                    background-color:#0e1f56;
+                    color: #fff;
+                    box-shadow: 1px 1px 5px #0e1f56;
+                }
             }
         }
     }
@@ -100,7 +103,7 @@
 }
 
 @media (max-width: 991px) {
-    .col-lg-4 {
-        display: none;
+    .indexSale {
+        margin-top: unset !important;
     }
 }

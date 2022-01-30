@@ -5,24 +5,8 @@ const featuredProductCardBox = document.querySelector('.featuredProductCardBox')
 // I know this solution is really bad. I couldn't have time to find better solution.
 
 featuredProductRightBtn.addEventListener("click", () => {
-    let featuredProductCards = featuredProductCardBox.querySelectorAll(".featuredProductCard");
-    jQuery(featuredProductCardBox).ready(function () {
-        featuredProductCards[0].remove();
-        jQuery(featuredProductCardBox)
-            .append(`	<div class="col-12 col-lg-3 p-2 featuredProductCard featuredProductActive">
-                            <div class="card">
-                                <img src="https://picsum.photos/${200 + Math.floor(Math.random() * 50)}/${100 + Math.floor(Math.random() * 50)}" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h6 class="card-title">Card with stretched link</h6>
-                                    <a href="#" class="btn ">Go somewhere</a>
-                                </div>
-                            </div>
-                        </div>`
-            );
-    });
-    console.log(featuredProductCards)
+    foo();
 })
-
 
 featuredProductLeftBtn.addEventListener("click", () => {
     let featuredProductCards = featuredProductCardBox.querySelectorAll(".featuredProductCard");
@@ -35,7 +19,7 @@ featuredProductLeftBtn.addEventListener("click", () => {
             outerHTML = outerHTML + featuredProductCards[index].outerHTML;
         }
         jQuery(featuredProductCardBox)
-            .append(`	<div class="col-12 col-lg-3 p-2 featuredProductCard featuredProductActive">
+            .append(`<div class="col-12 col-lg-3 p-2 featuredProductCard featuredProductActive">
                         <div class="card">
                             <img src="https://picsum.photos/${200 + Math.floor(Math.random() * 50)}/${100 + Math.floor(Math.random() * 50)}" class="card-img-top" alt="...">
                             <div class="card-body">
@@ -84,5 +68,26 @@ window.onload = function () {
         }
     }
 }
-window.onload(() => {});
+window.onload(() => { });
 
+function foo() {
+    let featuredProductCards = featuredProductCardBox.querySelectorAll(".featuredProductCard");
+    jQuery(featuredProductCardBox).ready(function () {
+        featuredProductCards[0].remove();
+        jQuery(featuredProductCardBox)
+            .append(`	<div class="col-12 col-lg-3 p-2 featuredProductCard featuredProductActive">
+                            <div class="card">
+                                <img src="https://picsum.photos/${200 + Math.floor(Math.random() * 50)}/${100 + Math.floor(Math.random() * 50)}" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h6 class="card-title">Card with stretched link</h6>
+                                    <a href="../pages/page404.html" class="btn ">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>`
+            );
+    });
+}
+
+
+
+setInterval(foo, 5000);

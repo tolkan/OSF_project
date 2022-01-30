@@ -1,0 +1,259 @@
+$green-color: #198754;
+$btn-color: rgb(196, 196, 196);
+$social-media-color: rgb(143, 143, 143);
+@mixin custom-button {
+    margin: 0;
+    background-color: transparent;
+    border: solid 2px $btn-color;
+}
+#cartPage {
+    padding-top: 120px;
+    padding-bottom: 50px;
+    min-height: 100vh;
+    background-color: rgb(221, 220, 220);
+    .breadcramp {
+        margin: 40px 0px;
+        div {
+            &:first-child {
+                margin-bottom: 20px;
+            }
+            text-align: center;
+            a {
+                margin: auto 10px;
+                color: $green-color;
+            }
+            p {
+                margin: auto 10px;
+                display: inline-block;
+            }
+            hr {
+                display: inline-block;
+                width: 33%;
+                min-width: 70px;
+                background-color: black;
+                margin: 10px;
+            }
+            h1 {
+                padding: 0px;
+                margin: 0px;
+                display: inline-block;
+            }
+        }
+    }
+    .cartContainer {
+        background-color: white;
+        border-radius: 8px;
+        padding: 20px;
+        div{
+            padding: 0px !important;
+            margin: 5px 0px;
+        }
+        .productBox {
+            padding: 0px 10px 10px 0px;
+            border: solid 1px $social-media-color;
+            border-radius: 5px;
+            position: relative;
+            .imgBox {
+                padding: 0px;
+                margin-top: 0px;
+                margin-bottom: auto;
+                height: 120px;
+       
+                img {
+                    border-radius: 4px 0px 0px 0px;
+                    margin: 0px;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            .productInfo {
+                margin-top: auto ;
+                div{
+                    padding: 10px;
+                    p{
+                        margin: 0px;
+                        padding: 0px 20px 0px 10px;
+                    }
+                    span{
+                        margin-left: 10px;
+                        color:$social-media-color;
+                    }
+                }
+                
+            }
+            .number-of {
+                text-align: center;
+                height: 44px;
+                
+                ul {
+                    list-style: none;
+                    padding: 0;
+                    list-style-type: none;
+                    overflow: hidden;
+                    display: inline-flex;
+        
+                    li {
+                        margin: 0;
+                        padding: 0;
+                        p {
+                            border-top: solid 2px $btn-color;
+                            border-bottom: solid 2px $btn-color;
+                            margin: 0;
+                            padding: 7px 5px;
+                            text-align: center;
+                            cursor: default;
+                        }
+                        button {
+                            font-size: 12px;
+                            padding: 10px 20px;
+                            @include custom-button();
+                            &.left {
+                                padding-right: 15px;
+                                border-right: none;
+                                border-radius: 30px 0px 0px 30px;
+                            }
+                            &.right {
+                                padding-left: 15px;
+                                border-left: none;
+                                border-radius: 0px 30px 30px 0px;
+                            }
+
+                            &:hover {
+                                border-color: rgb(177, 177, 177);
+                            }
+                        }
+                    }
+                }
+            }
+            .totalPrice {
+                text-align: center;
+                padding: 0px auto;
+                font-size: 25px;
+                max-height: 44px;
+            }
+            .closeBtn {
+                width: 30px;
+                padding: 0px;
+                position: absolute;
+                right: 10px !important;
+                top:  7px;
+                i {
+                    font-size: 25px;
+                    padding: 0px;
+                    text-align: center;
+                }
+            }
+        }
+        .infoBox{
+            .cuponCode{
+                input{
+                    @include custom-button();
+                    max-width: 300px;
+                    border-radius: 20px;
+                    margin: 0px 40px 0px 0px;
+                    padding: 0px 0px 0px 15px;
+                    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+                    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+                    box-sizing: border-box; 
+                    height: 38px;
+                    box-shadow: none;
+                }
+                button{
+                    @include custom-button();
+                    border: solid 1px $green-color;
+                    color: $green-color !important;
+                    border-radius: 20px;
+                    margin: 0px 0px 20px 0px;
+                    padding: 6px 30px !important;
+                    box-shadow: none;
+                }
+            }
+            .updateCart{
+                width: 100%;
+                button{
+                    display:  inline-block !important;
+                    margin-right: 5% !important; 
+                    @include custom-button();
+                    border: solid 1px $green-color;
+                    color: $green-color !important;
+                    border-radius: 20px;
+                    box-shadow: none;
+                    &:last-child{
+                        margin-right: 0px !important;
+                        margin-left: 5% !important;
+                        color: white !important;
+                        background-color: $green-color;
+                    }
+                }
+            }
+            .cartSubTotal{
+              
+                display: flex;
+                p{
+                    width: 50%;
+             
+                }
+            }
+            .shippingAndHandling{
+                display: flex;
+            
+                p{
+                    width: 50%;
+                }
+                div{
+                    margin-top: 0px;
+              
+                    width: 50%;
+                    .form-check{
+                        .form-check-input{
+                            box-shadow: none;
+                            font-size: larger;
+                        }
+                        .form-check-input:checked{
+                            background-color: $green-color;
+                            text-decoration: none;
+                 
+                        }
+                        margin-left: 20px;
+                        width: calc(100% - 20px);
+                    }
+                }
+            }
+            .orderTotal{
+                display: flex;
+                p{
+                    width: 50%;
+                    height: 100%;
+                    padding-top: 15px ;
+                }
+                h1{
+                    width: 50%;
+                }
+            }
+
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    #notFound {
+        .breadcramp {
+            div {
+                hr {
+                    width: 40%;
+                    margin: 15px;
+                }
+            }
+        }
+    }
+    .productInfo {
+        margin-top: unset!important;
+        
+    }
+    .imgBox {
+        img {
+            border-radius: 4px 0px 0px 4px !important;
+        }
+    }
+}

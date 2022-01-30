@@ -1,9 +1,13 @@
 $green-color: #198754;
-
+@mixin btnStyle {
+    padding: 5px 45px;
+    border-radius: 25px;
+    background-color: $green-color;
+}
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    z-index: 10000000 !important; /* Sit on top */
     padding-top: 100px; /* Location of the box */
     left: 0;
     top: 0;
@@ -11,7 +15,8 @@ $green-color: #198754;
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0, 0, 0); /* Fallback color */
-    background-color: rgba(0, 0, 0, 0.6); /* Black w/ opacity */
+    background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
+
     .modal-content {
         background-color: #fefefe;
         margin: auto;
@@ -54,8 +59,7 @@ $green-color: #198754;
             .formSubmit {
                 text-align: center;
                 button {
-                    padding: 5px 45px;
-                    border-radius: 25px;
+                    @include btnStyle();
                     display: block;
                     margin: auto;
                 }
@@ -82,11 +86,102 @@ $green-color: #198754;
                 }
             }
         }
+        &.cookies {
+            width: auto;
+            position: fixed;
+            bottom: 60px;
+            left: 20px;
+            right: 20px;
+            a {
+                color: $green-color;
+            }
+            h4 {
+                color: $green-color;
+            }
+            div {
+                div {
+                    &:last-child {
+                        &.col-lg-4 {
+                            display: flex;
+
+                            button {
+                                @include btnStyle();
+                                margin: auto;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &#ProductImgModal {
+        padding: 10px;
+        .modal-content {
+            margin: auto;
+            max-width: 600px;
+            padding: 0px;
+            margin-top: 10vh;
+    
+            .imageBox {
+                display: inline-block;
+                width: 100%;
+                height: auto;
+              
+               
+                img {     
+                 width: 100%;
+                 height: 100%;
+                 object-fit: cover;
+                 max-width: 600px !important;
+                 max-height: 600px !important;
+                 
+                }
+            }
+            .close {
+                color: $green-color;
+                top: -18px !important;
+                font-size: 50px;
+                font-weight: bold;
+                &:hover {
+                    color: #000;
+                    text-decoration: none;
+                    cursor: pointer;
+                }
+            }
+        }
     }
 }
 
 @media (min-width: 992px) {
     .modal-content {
         max-width: 450px;
+        &.cookies {
+            max-width: 1280px;
+            width: 100%;
+            button {
+                margin: auto 0px 0px auto !important;
+            }
+        }
+    }
+
+    #ProductImgModal {
+     
+        .modal-content {
+            max-width: 600px;
+           
+    
+            .imageBox {
+                display: inline-block;
+                width: auto;
+                height: 80vh;
+                
+                img {
+                   
+                 height: 100%;
+                 width: auto;
+                }
+            }
+        }
     }
 }

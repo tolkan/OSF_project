@@ -1,5 +1,6 @@
 $btn-color: rgb(196, 196, 196);
 $social-media-color: rgb(143, 143, 143);
+$green-color: #198754;
 @mixin custom-button {
     margin: 0;
 
@@ -8,13 +9,37 @@ $social-media-color: rgb(143, 143, 143);
 }
 
 .product {
-    background-color: bisque;
+    overflow: scroll;
+    background-color: transparent;
     padding: 120px 0px 30px 0px;
-    .bread-cramp {
-        text-align: center;
-    }
-    h1 {
-        text-align: center;
+    .breadcramp {
+        margin: 40px 0px;
+        div {
+            &:first-child {
+                margin-bottom: 20px;
+            }
+            text-align: center;
+            a {
+                margin: auto 10px;
+                color: $green-color;
+            }
+            p {
+                margin: auto 10px;
+                display: inline-block;
+            }
+            hr {
+                display: inline-block;
+                width: 33%;
+                min-width: 70px;
+                background-color: black;
+                margin: 10px;
+            }
+            h1 {
+                padding: 0px;
+                margin: 0px;
+                display: inline-block;
+            }
+        }
     }
     .productBox {
         border-radius: 5px;
@@ -23,17 +48,36 @@ $social-media-color: rgb(143, 143, 143);
         background-color: white;
         padding: 5px;
         .product-left {
+            position: relative;
             text-align: center;
             padding: 2px;
+            max-height: 450px;
+            i {
+                position: absolute;
+                left: 10px;
+                top: 10px;
+                font-size: 30px;
+                color: #198754;
+                &:hover {
+                    cursor: pointer;
+                    color: #014e2a;
+                }
+            }
             img {
-                width: 100% !important;
-                height: 100%;
+                width: auto;
+                max-height: 100% !important;
+                max-width: 100% !important;
                 object-fit: cover;
                 border-radius: 3px;
             }
         }
         .product-center {
+            padding: 10px;
+            overflow-x: scroll;
+            overflow-y: hidden;
+            white-space: nowrap;
             text-align: center;
+
             div {
                 display: inline-block;
                 padding: 2px;
@@ -44,13 +88,12 @@ $social-media-color: rgb(143, 143, 143);
             em {
                 font-size: 3rem;
             }
-            .color{
-                button{
+            .color {
+                button {
                     @include custom-button();
                     box-shadow: none;
                     border-radius: 30px;
                 }
-              
             }
             .number-of {
                 display: inline-block;
@@ -132,6 +175,16 @@ $social-media-color: rgb(143, 143, 143);
             }
             .product-about {
                 margin: 10px 0px;
+                .readMore {
+                    color: $green-color;
+                    cursor: pointer;
+                }
+                .showless {
+                    display: none;
+                    color: rgb(161, 5, 5);
+                    cursor: pointer;
+
+                }
             }
             .social-media {
                 padding: 20px 0px;
@@ -182,7 +235,7 @@ $social-media-color: rgb(143, 143, 143);
                     &.productInfoBtnActive {
                         display: unset;
                     }
-                    ul {  
+                    ul {
                         display: unset;
                         padding: 0px 10px;
                         li {
@@ -229,6 +282,32 @@ $social-media-color: rgb(143, 143, 143);
 @media (min-width: 992px) {
     .product {
         .productBox {
+            .product-left {
+                text-align: center;
+                padding: 2px;
+                max-height: unset;
+                img {
+                    width: 100%;
+                    height: 100% !important;
+                    object-fit: cover;
+                    border-radius: 3px;
+                }
+            }
+            .product-center {
+                text-align: center;
+                min-height: 100%;
+                max-height: 536px;
+                overflow: auto;
+                overflow-x: hidden;
+                overflow-y: auto;
+                white-space: normal;
+                text-align: center;
+                div {
+                    display: inline-block;
+                    padding: 2px;
+                    margin: 1px;
+                }
+            }
             .productInfo {
                 margin-top: 25px;
                 padding: 0px;
